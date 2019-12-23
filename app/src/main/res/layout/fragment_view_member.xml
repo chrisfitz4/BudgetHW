@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:clickable="true">
+
+    <EditText
+        android:id="@+id/et_type_viewfrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextColor"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:textSize="@dimen/text_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <EditText
+        android:id="@+id/et_location_viewfrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextColor"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:textSize="@dimen/text_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_type_viewfrag" />
+
+    <EditText
+        android:id="@+id/et_cost_viewfrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextColor"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:textSize="@dimen/text_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_location_viewfrag" />
+
+    <EditText
+        android:id="@+id/et_month_viewfrag"
+        style="@style/DateStyle"
+        android:maxLength="2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_dashone_viewfrag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cost_viewfrag" />
+
+    <TextView
+        android:id="@+id/tv_dashone_viewfrag"
+        style="@style/TextColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_32sp"
+        android:text="@string/dash"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_month_viewfrag"
+        app:layout_constraintEnd_toStartOf="@id/et_day_viewfrag"
+        app:layout_constraintTop_toBottomOf="@+id/et_cost_viewfrag" />
+
+    <EditText
+        android:id="@+id/et_day_viewfrag"
+        style="@style/DateStyle"
+        android:maxLength="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_dashone_viewfrag"
+        app:layout_constraintEnd_toStartOf="@+id/tv_dashtwo_viewfrag"
+        app:layout_constraintTop_toBottomOf="@+id/et_cost_viewfrag" />
+
+    <TextView
+        android:id="@+id/tv_dashtwo_viewfrag"
+        style="@style/DateStyle"
+        android:text="@string/dash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_day_viewfrag"
+        app:layout_constraintEnd_toStartOf="@+id/et_year_viewfrag"
+        app:layout_constraintTop_toBottomOf="@+id/et_cost_viewfrag" />
+
+    <EditText
+        android:id="@+id/et_year_viewfrag"
+        android:maxLength="2"
+        style="@style/DateStyle"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_dashtwo_viewfrag"
+        app:layout_constraintTop_toBottomOf="@+id/et_cost_viewfrag" />
+
+    <Button
+        android:id="@+id/bt_confirm_viewfrag"
+        style="@style/ButtonStyle"
+        android:text="@string/confirm"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bt_cancel_viewfrag" />
+
+    <Button
+        android:id="@+id/bt_cancel_viewfrag"
+        style="@style/ButtonStyle"
+        android:text="@string/cancel"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_types_viewfrag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/et_day_viewfrag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cost_viewfrag" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

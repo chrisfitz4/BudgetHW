@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/barely_transparent_bk"
+    android:clickable="true">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_type_addfrag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:layout_marginBottom="@dimen/dimen_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_location_addfrag"
+        style="@style/TextColor"
+        android:layout_marginBottom="@dimen/dimen_24dp"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:layout_width="0dp"
+        android:hint="@string/location"
+        android:textSize="@dimen/text_32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_type_addfrag" />
+
+    <EditText
+        android:id="@+id/et_cost_addfrag"
+        style="@style/TextColor"
+        android:layout_width="0dp"
+        android:hint="@string/cost"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/text_32sp"
+        android:onClick="deleteText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_month_addfrag" />
+
+
+    <Button
+        android:id="@+id/bt_save_addfrag"
+        style="@style/ButtonStyle"
+        android:text="@string/save"
+        android:layout_marginBottom="@dimen/dimen_24dp"
+        app:layout_constraintBottom_toTopOf="@id/bt_cancel_addfrag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_cancel_addfrag"
+        style="@style/ButtonStyle"
+        android:text="@string/cancel"
+        android:layout_marginBottom="@dimen/dimen_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/et_month_addfrag"
+        style="@style/DateStyle"
+        android:hint="@string/mm"
+        android:maxLength="2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@+id/tv_dashone_addfrag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_location_addfrag"
+        />
+
+    <TextView
+        android:id="@+id/tv_dashone_addfrag"
+        style="@style/DateStyle"
+        android:text="@string/dash"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@id/et_month_addfrag"
+        app:layout_constraintEnd_toStartOf="@+id/et_day_addfrag"
+        app:layout_constraintBottom_toBottomOf="@id/et_month_addfrag"
+        app:layout_constraintStart_toEndOf="@+id/et_month_addfrag" />
+
+    <EditText
+        android:id="@+id/et_day_addfrag"
+        style="@style/DateStyle"
+        android:hint="@string/dd"
+        android:maxLength="2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@+id/tv_dashtwo_addfrag"
+        app:layout_constraintStart_toEndOf="@+id/tv_dashone_addfrag"
+        app:layout_constraintTop_toBottomOf="@+id/et_location_addfrag" />
+
+    <TextView
+        android:id="@+id/tv_dashtwo_addfrag"
+        style="@style/DateStyle"
+        android:text="@string/dash"
+        app:layout_constraintTop_toTopOf="@id/et_month_addfrag"
+        app:layout_constraintBottom_toBottomOf="@id/et_month_addfrag"
+        app:layout_constraintEnd_toStartOf="@+id/et_year_addfrag"
+        app:layout_constraintStart_toEndOf="@+id/et_day_addfrag" />
+
+    <EditText
+        android:id="@+id/et_year_addfrag"
+        style="@style/DateStyle"
+        android:hint="@string/yy"
+        android:maxLength="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_dashtwo_addfrag"
+        app:layout_constraintTop_toBottomOf="@+id/et_location_addfrag" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

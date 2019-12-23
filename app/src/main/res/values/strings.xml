@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">budget</string>
+    <string name="budget">set budget</string>
+    <string name="add_expense">add expense</string>
+    <string name="confirm">confirm</string>
+    <string name="cancel">cancel</string>
+    <string name="location">location</string>
+    <string name="cost">cost</string>
+    <string name="save">save</string>
+    <string name="mm">MM</string>
+    <string name="dash">-</string>
+    <string name="dd">DD</string>
+    <string name="yy">YY</string>
+</resources>

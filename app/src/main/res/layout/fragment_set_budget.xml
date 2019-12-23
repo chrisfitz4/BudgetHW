@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/barely_transparent_bk"
+    android:clickable="true">
+
+    <Button
+        android:id="@+id/bt_confirm_setfrag"
+        style="@style/ButtonStyle"
+        android:text="@string/confirm"
+        android:layout_marginBottom="@dimen/dimen_24dp"
+        app:layout_constraintBottom_toTopOf="@id/bt_cancel_setfrag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_cancel_setfrag"
+        style="@style/ButtonStyle"
+        android:text="@string/cancel"
+        android:layout_marginBottom="@dimen/dimen_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_setbudg_setfrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/budget"
+        android:textSize="@dimen/text_32sp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/light_text_color"
+        android:textColor="@color/light_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
